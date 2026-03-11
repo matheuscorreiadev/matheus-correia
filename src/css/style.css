@@ -88,6 +88,28 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+
+
+/* Estilização da Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px; /* Altura ideal para um header padrão */
+    width: auto;  /* Mantém a proporção */
+    border-radius: 50%;   
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Pequeno zoom interativo */
+}
+
+
+
 /* =====================================================
     SEÇÕES E GRID DE PORTFÓLIO
 =====================================================*/
@@ -101,6 +123,76 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
+}
+
+/* =====================================================
+    ESTILIZAÇÃO DE LISTAS (FORMAÇÃO)
+=====================================================*/
+#formacao ul {
+    list-style: none; /* Remove as bolinhas */
+    padding: 0;      /* Remove o recuo da esquerda */
+    margin-top: 15px;
+}
+
+#formacao li {
+    margin-bottom: 10px; /* Dá um espaçamento entre os cursos */
+    position: relative;
+}
+
+#formacao li::before {
+    content: "▹"; /* Um triângulo discreto */
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* =====================================================
+    ESTILO DA SEÇÃO SOBRE MIM (COM FOTO)
+=====================================================*/
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente a foto com o texto */
+    gap: 40px;           /* Espaço entre a foto e o texto */
+    margin-top: 20px;
+}
+
+.foto-perfil {
+    width: 250px;        /* Tamanho da imagem */
+    height: 250px;
+    border-radius: 50%;  /* Deixa redonda */
+    object-fit: cover;   /* Não distorce a imagem */
+    border: 5px solid var(--primary-color); /* Usa a cor do header como borda */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;      /* Impede que a foto "encolha" se o texto for grande */
+}
+
+.texto-perfil {
+    flex: 1;
+}
+
+.texto-perfil h1 {
+    margin-bottom: 20px;
+}
+
+/* =====================================================
+    AJUSTE DE RESPONSIVIDADE (MOBILE)
+=====================================================*/
+@media (max-width: 768px) {
+    .sobre-mim-conteudo {
+        flex-direction: column; /* Empilha a foto em cima do texto no celular */
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 180px;  /* Foto um pouco menor no celular */
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 35px; /* Reduz um pouco o tamanho da Logo no mobile */
+    }
 }
 
 /* =====================================================

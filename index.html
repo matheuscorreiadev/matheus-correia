@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matheus Correia</title>
+    <link rel="icon" href="/src/images/logo-favicon.ico" type="image/png">
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
@@ -12,7 +13,11 @@
     <header id="header">
         <nav class="container">
             <!-- Logo do site -->
-            <div class="logo">MatheusCorreia.Dev</div>
+            <div class="logo">
+    <a href="#sobre">
+        <img src="/src/images/logo-minha-marca.png" alt="Logo Matheus Correia">
+    </a>
+</div>
 
             <!-- Botão de menu mobile (hamburger) -->
             <div class="menu-toggle" id="mobile-menu">
@@ -38,27 +43,34 @@
     <main class="container">
 
         <!-- Seção Sobre Mim -->
-        <section id="sobre" class="section">
+        <section id="sobre" class="section sobre-mim-container">
+            <div class="sobre-mim-conteudo">
+        <img src="/src/images/foto-perfil.jpg" alt="Foto de Matheus Correia" class="foto-perfil">
+        
+        <div class="texto-perfil">
             <h1>Sobre Mim</h1>
             <p>
-                Olá! Meu nome é Matheus Correia, tenho 33 anos. Atualmente sou Operador de Empilhadeira
+                Olá! Meu nome é Matheus Correia, tenho 33 anos. Atualmente sou Operador de Empilhadeira e faço trabalho extra como Freelancer em Manutenção de Computadores na minha cidade. Com uma paixão por tecnologia
                 e estou em fase de transição de carreira, meu desejo é me tornar um desenvolvedor web full stack.
                 Graduando em Análise e Desenvolvimento de Sistemas na Faculdade Uninter, e também estudante de
                 Desenvolvimento Web Full Stack no Curso DevQuest. Sou um desenvolvedor focado em soluções web
                 eficientes.
                 Gosto de transformar problemas complexos em interfaces intuitivas.
             </p>
-            <p><strong>Hobbies:</strong> Programação, leitura técnica e trilhas ao ar livre.</p>
+            <br>
+            <p><strong>Hobbies:</strong> Futebol, viajar de motocicleta, ler livros e trilhas ao ar livre.</p>
+        </div>
+    </div>
         </section>
 
         <!-- Seção Formação e Idiomas -->
         <section id="formacao" class="section">
             <h2>Formação e Idiomas</h2>
             <ul>
-                <li><strong>Superior:</strong> Análise e Desenvolvimento de Sistemas (Em andamento)</li>
-                <li><strong>Curso:</strong> Desenvolvimento Web Full Stack (Em andamento)</li>
-                <li><strong>Curso:</strong> Montagem e Manutenção de Computadores</li>
-                <li><strong>Curso:</strong> Microsoft Office Básico e Avançado</li>
+                <li><strong>Superior:</strong> Análise e Desenvolvimento de Sistemas (Em andamento) - Uninter</li>
+                <li><strong>Curso:</strong> Desenvolvimento Web Full Stack (Em andamento) - DevQuest</li>
+                <li><strong>Curso:</strong> Montagem e Manutenção de Computadores - Udemy</li>
+                <li><strong>Curso:</strong> Microsoft Office Básico e Avançado - Udemy</li>
                 <li><strong>Idiomas:</strong> Inglês Básico, Espanhol Básico</li>
             </ul>
         </section>
@@ -128,6 +140,32 @@
                     </p>
                     <a href="https://matheuscorreiadev.github.io/age-calculator-app-challenge/" target="_blank"
                         rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="/src/images/lista-de-tarefas.png" alt="Projeto Lista de Tarefas"
+                            class="card-img">
+                    </div>
+                    <h3>Lista de Tarefas</h3>
+                    <p>
+                        Estruturei a Lista de Tarefas com HTML5; Criei uma estrutura básica com um input para adicionar tarefas e uma lista dinâmica para exibi-las. Estilizei com CSS3, desing simples moderno e a fonte usada é Poppins do Google Fonts, na parte da lógica fiz com JavaScript e criei a função para adicionar uma tarefa na lista dinamicamente, o código tambem captura o texto digitado e cria um novo item na lista e também adicionei um evento para deletar tarefas ao cliclar no botão ❌
+                    </p>
+                    <a href="https://matheuscorreiadev.github.io/to-do-list/" target="_blank" rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
+                </div>
+                
+                <!-- Projeto 6 -->
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="/src/images/buscador-perfil-github.png" alt="Projeto Buscador de Perfil Github"
+                            class="card-img">
+                    </div>
+                    <h3>Buscador de Perfil Github</h3>
+                    <p>
+                        Projeto do curso DevQuest, uma quest para testar a habilidade de nós alunos do curso. Usando fetch no JavaScript para buscar um usuário no API do GitHub. Esse desafio faz parte do final do modulo JavaScript Avançado do curso. Ao clicar no botão "Buscar" ou na tecla "Enter", o sistema faz uma busca utilizando a API do GitHub. Se o usuário existir, exibe as informações do perfil, como nome, avatar, número de repositórios e seguidores. Caso contrário, exibe uma mensagem de erro indicando que o usuário não foi encontrado.
+                    </p>
+                    <a href="https://matheuscorreiadev.github.io/Quest-JavaScript-Avancado/" target="_blank" rel="noopener noreferrer" class="btn-projeto">Ver Projeto</a>
                 </div>
 
             </div>
