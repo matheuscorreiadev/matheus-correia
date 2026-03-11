@@ -209,3 +209,64 @@ footer {
     padding: 40px 0;
     font-size: 0.9rem;
 }
+
+
+/* --- Responsividade e Menu Mobile --- */
+
+/* Botão Hamburguer (invisível por padrão no desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Transforma o menu em um overlay vertical */
+    nav ul {
+        display: none; /* Esconde o menu */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    /* Classe que será adicionada via JavaScript */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    /* Ajustes de grid para telas muito pequenas */
+    .grid-portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0 40px 0;
+    }
+}

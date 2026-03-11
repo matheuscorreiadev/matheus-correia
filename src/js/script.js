@@ -1,6 +1,6 @@
 // Aguarda o carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Alternância de Tema (Dark Mode)
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('click', () => {
@@ -10,6 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDark = document.body.classList.contains('dark-mode');
         themeToggle.textContent = isDark ? "Modo Claro" : "Modo Escuro";
     });
+
+    // --- NOVO: Lógica do Menu Hamburguer ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Opcional: animação nas barrinhas do menu
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Fecha o menu ao clicar em um link (importante para UX mobile)
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    }
 
     // 2. Validação do Formulário de Contato
     const contactForm = document.getElementById('contact-form');
